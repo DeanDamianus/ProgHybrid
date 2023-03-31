@@ -10,7 +10,7 @@ class cart extends StatelessWidget {
           title: Text('TOKO-NYA DIA'),centerTitle: true,
         ),
         body: Container(
-          child: Text("Terimakasih Sudah Order"),
+          child: Center(child: Text("Terimakasih Sudah Order!!")),
         ),
     );
   }

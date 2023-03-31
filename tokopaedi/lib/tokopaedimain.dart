@@ -119,7 +119,9 @@ class tokopaedimain extends StatelessWidget {
               width: 70,
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () =>
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return next();})),
               child: Text('< Prev'),
               style: TextButton.styleFrom(
                   primary: Colors.white,
