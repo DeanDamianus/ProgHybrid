@@ -9,7 +9,9 @@ class cart extends StatelessWidget {
       appBar: AppBar(
           title: Text('TOKO-NYA DIA'),centerTitle: true,
         ),
-        body: Container(),
+        body: Container(
+          child: Text("Terimakasih Sudah Order"),
+        ),
     );
   }
 }

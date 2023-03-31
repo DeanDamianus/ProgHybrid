@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tokopaedi/barang.dart';
-import 'package:tokopaedi/cart.dart';
-import 'package:provider/provider.dart';
-import 'package:tokopaedi/next.dart';
+import 'package:tokopaedi/tokopaedimain.dart';
+import 'cart.dart';
 
-class tokopaedimain extends StatelessWidget {
-  const tokopaedimain({super.key});
+class next extends StatelessWidget {
+  const next({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +23,43 @@ class tokopaedimain extends StatelessWidget {
                 children: [
                   Image(
                       image: NetworkImage(
-                          'https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/11/Resep-Ayam-bakar-bumbu-bali.jpg?fit=1742%2C1887&ssl=1'),
+                          'https://i0.wp.com/resepkoki.id/wp-content/uploads/2016/04/Resep-Bebek-Goreng-Surabaya.jpg?fit=1275%2C1199&ssl=1'),
                       height: 90,
                       width: 90,
                       fit: BoxFit.fitWidth),
                   Column(
                     children: [
-                      Text('Abam Yakar'),
+                      Text('Gebek Boreng'),
+                      Text('5 Kg'),
+                      TextButton(
+                        child: Text('+'),
+                        style: TextButton.styleFrom(
+                            primary: Colors.white,
+                            backgroundColor: Colors.green,
+                            textStyle: TextStyle(fontSize: 20)),
+                        onPressed: () {
+                          print('Pressed');
+                        },
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Container(
+              color: Color.fromARGB(255, 178, 174, 174),
+              margin: EdgeInsets.all(7),
+              child: Column(
+                children: [
+                  Image(
+                      image: NetworkImage(
+                          'https://sweetrip.id/wp-content/uploads/2022/09/resep-mie-ayam-abang-abang.jpeg'),
+                      height: 90,
+                      width: 90,
+                      fit: BoxFit.fitWidth),
+                  Column(
+                    children: [
+                      Text('Mie Maya'),
                       Text('4 Kg'),
                       TextButton(
                         child: Text('+'),
@@ -55,43 +83,13 @@ class tokopaedimain extends StatelessWidget {
                 children: [
                   Image(
                       image: NetworkImage(
-                          'https://cdn.yummy.co.id/content-images/images/20210222/1Xu50emAY2yX7QRnDrF0pZFgg350pEAv-31363133393236393137d41d8cd98f00b204e9800998ecf8427e.jpg?x-oss-process=image/format,webp'),
+                          'https://upload.wikimedia.org/wikipedia/commons/2/28/Bakso_mi_bihun.jpg'),
                       height: 90,
                       width: 90,
                       fit: BoxFit.fitWidth),
                   Column(
                     children: [
-                      Text('Sabur Yening'),
-                      Text('4 Kg'),
-                      TextButton(
-                        child: Text('+'),
-                        style: TextButton.styleFrom(
-                            primary: Colors.white,
-                            backgroundColor: Colors.green,
-                            textStyle: TextStyle(fontSize: 20)),
-                        onPressed: () {
-                          print('Pressed');
-                        },
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-            Container(
-              color: Color.fromARGB(255, 178, 174, 174),
-              margin: EdgeInsets.all(7),
-              child: Column(
-                children: [
-                  Image(
-                      image: NetworkImage(
-                          'https://img-global.cpcdn.com/recipes/517f607789fb16fd/400x400cq70/photo.jpg'),
-                      height: 90,
-                      width: 90,
-                      fit: BoxFit.fitWidth),
-                  Column(
-                    children: [
-                      Text('Tebor Lakar'),
+                      Text('Bakso Tikus'),
                       Text('5 Kg'),
                       TextButton(
                         child: Text('+'),
@@ -119,7 +117,10 @@ class tokopaedimain extends StatelessWidget {
               width: 70,
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () =>
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return tokopaedimain();
+              })),
               child: Text('< Prev'),
               style: TextButton.styleFrom(
                   primary: Colors.white,
@@ -133,7 +134,7 @@ class tokopaedimain extends StatelessWidget {
             TextButton(
               onPressed: () =>
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return next();
+                return tokopaedimain();
               })),
               child: Text('Next >'),
               style: TextButton.styleFrom(
